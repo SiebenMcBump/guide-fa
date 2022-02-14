@@ -1,0 +1,379 @@
+:root {
+    --font: 'Oswald', sans-serif;
+    --textes: 'Roboto', sans-serif;
+    --titres: 'Teko', sans-serif;
+
+    --bg-color: #181C1D;
+    --nav-color: black;
+    --txt-deco: #8F047C 0 0 15px, gray 0 0 20px;
+    --hamburger: #FF12DE6B;
+    --txt-color: #B8B9B9;
+    --toolbar: linear-gradient(rgb(0, 0, 0), rgb(64, 73, 72), rgb(0, 0, 0));
+
+    --strong: #90E2EBCC;
+
+    --titre-cat: #CD07B3;
+    --cat-sstitre: #03EAEFCC;
+    --cat-shad: #380731 0 0 15px, gray 0 0 20px;
+
+    --borders: rgba(32, 155, 202, 1);
+    --bg-sidebar: #303236;
+
+    --link: #ec75dc !important;
+    --link-hover: #57ddec;
+    --link-active: #f41bd7;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--textes);
+}
+
+body {
+    background: black;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: var(--titres);
+    color: var(--titre-cat);
+    text-shadow: var(--cat-shad);
+    letter-spacing: 0.4rem;
+    font-variant: small-caps;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 60px;
+    margin-top: 80px;
+}
+
+h1:first-of-type {
+    margin-top: 8px;
+}
+
+h2 {
+    position: relative;
+    letter-spacing: .05em;
+    color: var(--cat-sstitre);
+    font-family: var(--titres);
+    font-variant: small-caps;
+    font-size: 50px;
+    margin-left: 5px;
+    display: inline;
+    font-weight: 400;
+    padding-bottom: 5px;
+    line-height: 1.526;
+}
+
+h2:before {
+    border-right: 2px solid;
+    border-top: 2px solid;
+    transform: skewX(25deg);
+    position: absolute;
+    content: '';
+    width: calc(100% + 95px);
+    height: 73%;
+    top: -5px;
+    left: -41px;
+}
+
+h3 {
+    letter-spacing: .05em;
+    color: var(--cat-sstitre);
+    font-family: var(--titres);
+    font-variant: small-caps;
+    font-size: 35px;
+    font-weight: 400;
+    margin: 30px 0 15px 0;
+}
+
+h4 {
+    letter-spacing: .05em;
+    color: var(--cat-sstitre);
+    font-family: var(--titres);
+    font-variant: small-caps;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+
+.wrapper .sidebar {
+    background: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.wrapper .sidebar ul li a {
+    display: block;
+    padding: 8px 30px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--borders);
+    color: var(--txt-color);
+    position: relative;
+    transition: background-color 150ms ease-out;
+}
+
+.wrapper .sidebar ul li a.collapse:after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    transition: all 0.7s ease;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active {
+    color: var(--link);
+    background: var(--bg-sidebar);
+    border-right: 2px solid var(--borders);
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before {
+    display: block;
+}
+
+.wrapper .sidebar ul li ul {
+    margin-left: 30px;
+    font-size: 14px;
+    background: var(--bg-sidebar);
+}
+
+.wrapper .section {
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar {
+    background: var(--toolbar);
+    font-family: var(--font);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    justify-content: space-between;
+}
+
+.wrapper .section .top_navbar .hamburger a {
+    font-size: 28px;
+    text-shadow: var(--txt-deco);
+    color: var(--nav-color);
+    transition: all .5s ease-in-out;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover {
+    color: var(--hamburger);
+}
+
+.wrapper .section .top_navbar .forum a {
+    font-family: var(--font);
+    font-size: 25px;
+    text-shadow: var(--txt-deco);
+    color: var(--nav-color);
+    transition: all .5s ease-in-out;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.wrapper .section .top_navbar .forum a:hover {
+    box-shadow: none;
+    color: var(--nav-color);
+    background-color: #FFF;
+}
+
+.wrapper .section .tabcontent {
+    margin: 30px;
+    background: var(--bg-color);
+    padding: 50px;
+    line-height: 28px;
+    color: var(--txt-color);
+}
+
+.wrapper .section .tabcontent a {
+    color: var(--link);
+}
+
+.wrapper .section .tabcontent a:hover {
+    color: var(--link-hover);
+}
+
+.wrapper .section .tabcontent a:active {
+    color: var(--link-active);
+}
+
+.wrapper .section .tabcontent strong {
+    color: var(--strong);
+}
+
+.wrapper .section .tabcontent em {
+    color: var(--borders);
+}
+
+.wrapper .section .tabcontent ul {
+    margin: 5px 5% 0 5%;
+}
+
+.wrapper .section .tabcontent ul li:before {
+    content: "\2022";
+    color: var(--strong);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.wrapper .section .tabcontent .staff {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.wrapper .section .tabcontent .staff p {
+    align-self: center;
+    margin-left: 10px;
+}
+
+
+/* --------------- */
+
+body.active .wrapper .sidebar {
+    left: -225px;
+}
+
+body.active .wrapper .section {
+    margin-left: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: auto;
+}
+
+.rotate:after {
+    transform: rotate(180deg);
+}
+
+
+/* --------------- CHRONOLOGIE ---------------- */
+
+.wrapper .section .tabcontent .container {
+    max-width: 1024px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper .section .tabcontent .container h3 {
+    margin: 0;
+}
+
+.wrapper .section .tabcontent .container .timeline-item {
+    padding: 3em 2em 2em;
+    position: relative;
+    border-left: 2px solid var(--link-hover);
+}
+
+.wrapper .section .tabcontent .container .timeline-item:before {
+    content: attr(date-is);
+    position: absolute;
+    left: 2em;
+    top: 1em;
+    display: block;
+    font-weight: 700;
+    font-size: .785rem;
+    color: var(--link);
+}
+
+.wrapper .section .tabcontent .container .timeline-item:after {
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 1em;
+    position: absolute;
+    left: -7px;
+    border-radius: 10px;
+    content: '';
+    border: 2px solid black;
+    background: white;
+}
+
+.wrapper .section .tabcontent .container .timeline-item:last-child {
+    border-image: linear-gradient(to bottom, var(--link-hover) 0%, var(--bg-color)) 1 100%;
+}
+
+.wrapper .section .tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+.wrapper .section .tabcontent .container .timeline-item ul li:before {
+    content: "○";
+}
+
+
+/* --------------- */
+
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/******* Petits écrans ******/
+@media screen and (max-width: 950px) {
+    * {
+        word-wrap: break-word;
+    }
+
+    h1:first-of-type {
+        margin-top: 50px;
+    }
+
+    .wrapper .section .tabcontent {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .wrapper .section .top_navbar .forum a {
+        font-size: 15px;
+    }
+
+    .wrapper .section .tabcontent .container {
+        width: 100%;
+    }
+
+    .wrapper .section .tabcontent ul {
+        margin: 0;
+    }
+}
+
+/******* Fin media query ******/
