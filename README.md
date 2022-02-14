@@ -63,7 +63,7 @@ Pour avoir le rendu en direct, rien de plus simple : Il suffit de double-cliquer
 </div>
 ```
 
-La seule différence se trouve dans la class de la première div : "active" ou "hidden". Pense bien à systématiquement ajouter le "hidden" ou le JS risque de pas aimer~
+La seule différence se trouve dans la class de la première div : `active` ou `hidden`. Pense bien à systématiquement ajouter le `hidden` ou le JS risque de pas aimer~
 
 
 ### Code pour une section avec plusieurs niveaux
@@ -102,22 +102,22 @@ La seule différence se trouve dans la class de la première div : "active" ou "
 
 ### Ajouter un lien
 
-Pour les zones longues que tu souhaites séparer et rendre cliquables pour une navigation plus facile depuis la navbar, il suffit de modifier une des balises comme suit : <h2 id="nomDeSection1">. L'id peut s'appliquer à toutes les balises : div, span, titre, p...
+Pour les zones longues que tu souhaites séparer et rendre cliquables pour une navigation plus facile depuis la navbar, il suffit de modifier une des balises comme suit : `<h2 id="nomDeSection1">`. L'id peut s'appliquer à toutes les balises : `div`, `span`, `titre`, `p`...
 
 
 ## Balises déjà codées
 
 - `h1` : Gros titre
-- `h2` : Titre de section (Celui avec la barre au-dessus et à droite) (Sauf pour le premier <h2> d'une section, je conseille deux mettre deux <br><br> avant, parce que j'ai codé ça comme un sagouin et sinon le titre se retrouve trop collé avec la section au-dessus de lui)
+- `h2` : Titre de section (Celui avec la barre au-dessus et à droite) (Sauf pour le premier `<h2>` d'une section, je conseille deux mettre deux `<br><br>` avant, parce que j'ai codé ça comme un sagouin et sinon le titre se retrouve trop collé avec la section au-dessus de lui)
 - `h3` : Sous-titre
 - `h4` : Sous-sous-titre (Celui utilisé dans la navbar)
 
-- `p` : Zone de texte (Pense bien à l'utiliser pour entourer tous tes textes ! Elle ne peut contenir QUE du texte (et des <span>, <strong>, <em>, bref des balises "inline"). Les titres doivent être utilisés en-dehors, idem pour les listes.)
+- `p` : Zone de texte (Pense bien à l'utiliser pour entourer tous tes textes ! Elle ne peut contenir QUE du texte (et des `<span>`, `<strong>`, `<em>`, bref des balises "inline"). Les titres doivent être utilisés en-dehors, idem pour les listes.)
 
 - `strong` : Affichage en gras
 - `em` : Affichage en italique
 
-- `ul/li` : Affichage des listes (Pour reprendre avec une balise <p> après une liste, je conseille de la commencer par un <br> sinon les zones sont trop collées)
+- `ul/li` : Affichage des listes (Pour reprendre avec une balise `<p>` après une liste, je conseille de la commencer par un `<br>` sinon les zones sont trop collées)
 
 
 
@@ -129,7 +129,7 @@ Pour les zones longues que tu souhaites séparer et rendre cliquables pour une n
 
 ### Fonctionnement
 
-La première balise (`<li onclick="openTab(event, 'zone1')">`) est celle qui permet d'ouvrir l'onglet sélectionné. La seule chose à modifier est (dans ce cas) 'zone1'.
+La première balise (`<li onclick="openTab(event, 'zone1')">`) est celle qui permet d'ouvrir l'onglet sélectionné. La seule chose à modifier est (dans ce cas) `'zone1'`.
 
 La valeur remplie doit **OBLIGATOIREMENT** être la même que l'id de la div que l'on veut afficher. Ca correspond à la première div quand on remplit une section de texte (`<div id="zone1">`)
 
@@ -157,7 +157,7 @@ La valeur remplie doit **OBLIGATOIREMENT** être la même que l'id de la div que
 </li>
 ```
 
-La seule différence se trouve dans la classe du premier lien (`<a href>`) : "active" ou rien.
+La seule différence se trouve dans la classe du premier lien (`<a href>`) : `active` ou rien.
 
 
 ### Code pour une zone à plusieurs niveaux
@@ -261,4 +261,4 @@ Dans le champ "Nom du Forum :" il va falloir forcer le lien vers ta page HTML co
 `<a class="forumtitle" href="https://streetwyrd-rpg.forumactif.com/h3-guide" target="_blank">Nom de catégorie</a>`
 
 - L'attribut class est TRES important, il faut absolument que ce soit le même que pour les autres titres de tes catégories, sinon le CSS ne pourra pas s'appliquer. (En gros, ce qu'on fait là c'est ce qu'on appelle surcharger du code : on force le navigateur à renvoyer vers notre lien au lieu de celui auquel FA aurait normalement renvoyé. De fait, la classe habituelle de ces liens ne peut pas s'appliquer et on doit la renseigner nous-mêmes pour que le style s'y ajoute.)
-- L'attribut target="_blank" est facultatif, il permet de forcer le navigateur à ouvrir le guide dans un nouvel onglet.
+- L'attribut `target="_blank"` est facultatif, il permet de forcer le navigateur à ouvrir le guide dans un nouvel onglet.
