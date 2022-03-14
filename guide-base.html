@@ -158,51 +158,71 @@
                     <p><strong>Pseudo</strong> • <em>Graphiste</em><br>
                         Personnages : Piotr kek'chose
                 </div>
+                <br><br>
+
+                <h2 id="credits">Crédits</h2>
+                <p>Guide codé par Sieben sur une base de <a
+                        href="https://www.foolishdeveloper.com/2021/06/sidebar-menu-using-html-css-javascript.html">Foolish
+                        Developer</a>.<br>
+                    Chronologie codée par <a href="https://codepen.io/NielsVoogt/details/MbMMxv">Niels Voogt</a>.
+                </p>
+            </div>
+            <!-- Fin de la section de texte -->
+
+            <!-- Début de la navbar -->
+            <div class="sidebar">
+                <ul>
+                    <h4>Titre de section</h4>
+                    <li onclick="openTab(event, 'zone1')">
+                        <a href="#" class="tablink active">
+                            <span>Zone 1</span>
+                        </a>
+                    </li>
+
+                    <li onclick="openTab(event, 'zone2')">
+                        <a href="#" class="tablink collapse" onclick="collapse(event)">
+                            <span>Zone 2</span>
+                        </a>
+                        <ul class="hidden">
+                            <li>
+                                <a href="#navigation1" class="tablink">
+                                    <span>Sous-titre 1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#navigation2" class="tablink">
+                                    <span>Sous-titre 2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <h4>Titre de section</h4>
+                    <li onclick="openTab(event, 'chronologie')">
+                        <a href="#" class="tablink">
+                            <span>Chronologie</span>
+                        </a>
+                    </li>
+
+                    <li onclick="openTab(event, 'staff')">
+                        <a href="#" class="tablink collapse" onclick="collapse(event)">
+                            <span>Staff & Crédits</span>
+                        </a>
+                        <ul class="hidden">
+                            <li>
+                                <a href="#staff" class="tablink">
+                                    <span>Staff</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#credits" class="tablink">
+                                    <span>Crédits</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Fin de la navbar -->
         </div>
-        <!-- Fin de la section de texte -->
-
-        <!-- Début de la navbar -->
-        <div class="sidebar">
-            <ul>
-                <h4>Titre de section</h4>
-                <li onclick="openTab(event, 'zone1')">
-                    <a href="#" class="tablink active">
-                        <span>Zone 1</span>
-                    </a>
-                </li>
-
-                <li onclick="openTab(event, 'zone2')">
-                    <a href="#" class="tablink collapse" onclick="collapse(event)">
-                        <span>Zone 2</span>
-                    </a>
-                    <ul class="hidden">
-                        <li>
-                            <a href="#navigation1" class="tablink">
-                                <span>Sous-titre 1</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#navigation2" class="tablink">
-                                <span>Sous-titre 2</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <h4>Titre de section</h4>
-                <li onclick="openTab(event, 'chronologie')">
-                    <a href="#" class="tablink">
-                        <span>Chronologie</span>
-                    </a>
-                </li>
-                
-                <li onclick="openTab(event, 'staff')">
-                    <a href="#" class="tablink">
-                        <span>Staff</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <!-- Fin de la navbar -->
-    </div>
 </body>
